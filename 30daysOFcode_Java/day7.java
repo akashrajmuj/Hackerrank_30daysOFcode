@@ -27,17 +27,17 @@ public class Solution {
         }
 
         
-        int i,j,temp;
+        int i,j;
         for(i=0,j=n-1;i<j;i++,j--)
         {
-            temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
+            arr[i]=arr[i]+arr[j];  // swap 2 variables without use of a temp variable
+            arr[j]=arr[i]-arr[j];
+            arr[i]=arr[i]-arr[j];
             
         }
         
-        for(i=0;i<n;i++)
-            System.out.print(arr[i]+" ");
+        for(int k:arr)  //for each loop
+            System.out.print(k+" ");
         
         
         
